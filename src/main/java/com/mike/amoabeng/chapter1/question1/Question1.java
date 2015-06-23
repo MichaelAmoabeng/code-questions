@@ -2,26 +2,30 @@ package com.mike.amoabeng.chapter1.question1;
 
 
 public class Question1 {
-  public static main(String args[]) {
-        
+
     /*
     Implement an algorithm to determine if a string has all unique characters.
     What if you cannot use additional data structures?
     */
-        
-        String str = "abcdefg";
 
-        public boolean checkUnique (String str){
-            if (str.length() = 0) System.out.println("No string Entered");
+//**the below solution works if we are allowed to use additional data structures**
+    public static boolean checkUnique(String str){
+        boolean[] myArr = new boolean[256];
 
-            int check = 0;
-            for (int i = 0; i < str.length(); i++) {
-                int x = str.charAt(i);
+        for(int i = 0; i < str.length(); i++){
+            //convert char at position i to it's ASCII value
+            int ascii = (int) str.charAt(i);
 
-                //how do loop throught the string comparing individual characters?
-                if (str.)
+            //if we haven't seen this character before
+            if (!myArr[ascii]){
+                myArr[ascii]=true;
             }
-            return true;
+            else {
+                //char has been seen before so return false
+                return false;
+            }
+
         }
+        return true;
     }
 }
