@@ -5,7 +5,7 @@ public class Question3 {
 
     /*
         Given two strings, write a method to decide if one is a permutation of the other.
-    */
+
         public boolean checkPermutation(String str1, String str2){
             if (str1 == null || str2 == null)
                 return false;
@@ -20,4 +20,6 @@ public class Question3 {
 
             return Arrays.equals(x,y);
         }
+    */
 }
+
